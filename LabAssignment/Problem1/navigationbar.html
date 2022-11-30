@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dropdown</title>
+    <style>
+         header h1{
+            background-color: red;
+            margin: 0%;
+            padding: 20px;
+            text-align: center;
+        }
+        body{
+            height: auto;
+            margin: 0%; 
+        }
+        #navigate{
+            position: sticky;
+            top: 0%;
+            z-index: 1;
+        }
+        .parent-menu{
+            margin: 0%;
+            background-color: gray;
+        }
+        .parent-menu li a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .parent-menu li{
+            padding: 10px;
+            display: inline-block;
+        }
+        .parent-menu li:hover{
+            background-color: rgba(0, 0, 0, 0.7);;
+        }
+        .parent-menu li:nth-child(2):hover .child-menu, .parent-menu li:nth-child(3):hover .child-menu{
+            display: block;
+        }
+        .child-menu{
+         /*   list-style-type: none;*/
+           /* display: none;   */
+           /* position: absolute;
+            top:40px;
+            left:0px;
+            white-space: nowrap;
+            background-color: lightgray;*/
+           
+            position: absolute;
+            width: auto;
+            max-width: 150px;
+            display: none;
+            top: 42.5px;
+            background-color: whitesmoke;
+            padding: 0%;
+        }
+        .child-menu li{
+            display: block;
+        }
+        .child-menu li:hover{
+            background-color: gainsboro;
+        }
+        .child-menu li a{
+            color: steelblue;
+            font-size: 16px;
+        }
+       
+        /*
+        .item-containing-child-menu{
+            position: relative;
+        }
+        .child-default-display{
+            display: none;
+        }
+        .item-containing-child-menu:hover .child-menu{
+            display: block;
+        }
+        .list-element-styling{
+            list-style-type: none;
+        }
+        .child-menu > li > a {
+            text-decoration: none;
+            padding: 0.75em;
+            color: white;
+        }
+        */
+
+
+    </style>
+</head>
+<body>
+    <header><h1>Demo of Dropdown</h1></header>
+    <nav id="navigate">
+        <ul class="parent-menu">
+            <li>
+                <a href="">Link 1</a>
+            </li>
+
+            <li>
+                <a href="#">Link 2</a>
+                <ul class="child-menu">
+                    <li><a href="#">DD Link1</a></li>
+                    <li><a href="#">DD Link2</a></li>
+                    <li><a href="#">DD Link3</a></li>
+                </ul>
+            </li>
+            
+
+            <li>
+                <a href="#">Link 3</a>
+                <ul class="child-menu">
+                    <li><a href="#">DD Link1</a></li>
+                    <li><a href="#">DD Link2</a></li>
+                    <li><a href="#">DD Link3</a></li>
+                    <li><a href="#">DD Link4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>   
+</body>
+</html>
